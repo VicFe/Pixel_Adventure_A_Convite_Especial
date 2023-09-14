@@ -96,7 +96,7 @@ script = ExtResource("1_vb5mn")
 texture_filter = 1
 position = Vector2(0, -15)
 sprite_frames = SubResource("SpriteFrames_apejo")
-animation = &"hurt"
+animation = &"jump"
 autoplay = "idle"
 
 [node name="collision" type="CollisionShape2D" parent="."]

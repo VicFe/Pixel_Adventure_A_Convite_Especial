@@ -35,7 +35,7 @@ func flip_direction():
 	else: 
 		texture.flip_h = false
 		
-func kill_ground_enemy(anim_name: StringName) -> void:
+func kill_ground_enemy(_anim_name: StringName) -> void:
 	kill_and_score()
 		
 func kill_air_enemy() -> void:

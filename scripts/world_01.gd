@@ -12,7 +12,7 @@ func _ready() -> void:
 	Globals.score = 0
 	Globals.player_life = 3
 	
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass
 
 func _on_spikesarea_body_entered(body):

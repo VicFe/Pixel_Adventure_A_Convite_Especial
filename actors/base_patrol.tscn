@@ -47,6 +47,21 @@ _data = {
 }
 point_count = 2
 
+[sub_resource type="Animation" id="Animation_viq1j"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("path2D/path_follow2D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
 [sub_resource type="Animation" id="Animation_onl5o"]
 resource_name = "patrol"
 loop_mode = 2
@@ -63,21 +78,6 @@ tracks/0/keys = {
 "values": [0.0, 1.0]
 }
 
-[sub_resource type="Animation" id="Animation_viq1j"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("path2D/path_follow2D:progress_ratio")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gsm1i"]
 _data = {
 "RESET": SubResource("Animation_viq1j"),
@@ -87,7 +87,6 @@ _data = {
 [node name="base_patrol" type="Node2D"]
 
 [node name="rocket_cherry" type="CharacterBody2D" parent="."]
-position = Vector2(0, -97)
 collision_layer = 4
 script = ExtResource("1_8afin")
 enemy_score = 150
@@ -112,8 +111,6 @@ debug_color = Color(0.992157, 0, 0.262745, 0.419608)
 curve = SubResource("Curve2D_vo88m")
 
 [node name="path_follow2D" type="PathFollow2D" parent="path2D"]
-position = Vector2(0, -97)
-progress = 97.0
 rotates = false
 
 [node name="remote" type="RemoteTransform2D" parent="path2D/path_follow2D"]
@@ -127,5 +124,3 @@ speed_scale = 0.3
 libraries = {
 "": SubResource("AnimationLibrary_gsm1i")
 }
-
-[connection signal="body_entered" from="rocket_cherry/hitbox" to="rocket_cherry" method="_on_hitbox_body_entered"]

@@ -46,7 +46,7 @@ func _physics_process(delta):
 		if collision.get_collider().has_method("has_collided_with"):
 			collision.get_collider().has_collided_with(collision, self)
 	
-func _on_hurtbox_body_entered(body: Node2D) -> void:
+func _on_hurtbox_body_entered(_body: Node2D) -> void:
 	if $ray_right.is_colliding():
 			take_damage(Vector2(-200,-200))
 	elif $ray_left.is_colliding():

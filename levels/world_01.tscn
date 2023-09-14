@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://btuhq4m3cskby"]
+[gd_scene load_steps=49 format=3 uid="uid://btuhq4m3cskby"]
 
 [ext_resource type="Script" path="res://scripts/world_01.gd" id="1_qsjd4"]
 [ext_resource type="Texture2D" uid="uid://bcgvvt7obbd4j" path="res://assets/Seasonal Tilesets/1 - Grassland/Terrain (16 x 16).png" id="1_xlyao"]
@@ -36,6 +36,7 @@
 [ext_resource type="Texture2D" uid="uid://bstuh08nhmt8u" path="res://assets/brick-pieces-20230913T124303Z-001/brick-pieces/Coin-Sprites/03_Coin-Sprites.png" id="30_f4ecb"]
 [ext_resource type="FontFile" uid="uid://ck870aancxob0" path="res://assets/brick-pieces-20230913T113935Z-001/brick-pieces/RevMiniPixel.ttf" id="31_piu47"]
 [ext_resource type="Texture2D" uid="uid://dgcyerwe2a4c3" path="res://assets/brick-pieces-20230913T113935Z-001/brick-pieces/Life-Counter-Icon.png" id="32_jupk0"]
+[ext_resource type="PackedScene" uid="uid://bqmgt1cdyirc6" path="res://portal.tscn" id="37_sknir"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ll1cg"]
 texture = ExtResource("1_xlyao")
@@ -315,6 +316,9 @@ frame_2/texture = ExtResource("29_8uvo8")
 frame_2/duration = 1.0
 frame_3/texture = ExtResource("30_f4ecb")
 frame_3/duration = 1.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nktgp"]
+size = Vector2(20, 64)
 
 [node name="World-01" type="Node2D"]
 script = ExtResource("1_qsjd4")
@@ -732,6 +736,14 @@ theme_override_fonts/font = ExtResource("31_piu47")
 theme_override_font_sizes/font_size = 8
 text = "03"
 vertical_alignment = 1
+
+[node name="portal" parent="." instance=ExtResource("37_sknir")]
+position = Vector2(1880, 155)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="portal"]
+position = Vector2(0, -11)
+shape = SubResource("RectangleShape2D_nktgp")
 
 [connection signal="body_entered" from="spikes-area" to="." method="_on_spikesarea_body_entered"]
 [connection signal="body_entered" from="spikes-area2" to="." method="_on_spikesarea_body_entered"]
