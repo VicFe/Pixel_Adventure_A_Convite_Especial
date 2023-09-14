@@ -1,0 +1,138 @@
+[gd_scene load_steps=16 format=3 uid="uid://bddjcjdfxpo1r"]
+
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_vb5mn"]
+[ext_resource type="Texture2D" uid="uid://boos4ccr68gvu" path="res://assets/Sprite Pack 2/2 - Mr. Mochi/Hurt (32 x 32).png" id="2_35ydl"]
+[ext_resource type="Texture2D" uid="uid://5423ifruquhm" path="res://assets/Sprite Pack 2/2 - Mr. Mochi/Idle (32 x 32).png" id="2_e80cp"]
+[ext_resource type="Texture2D" uid="uid://dn8oa36mmbo4" path="res://assets/Sprite Pack 2/2 - Mr. Mochi/Jumping (32 x 32).png" id="3_4pgxm"]
+[ext_resource type="Texture2D" uid="uid://b6mgjj00jljrn" path="res://assets/Sprite Pack 2/2 - Mr. Mochi/Running (32 x 32).png" id="4_bdr4c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1x3np"]
+atlas = ExtResource("2_e80cp")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vtgbx"]
+atlas = ExtResource("2_e80cp")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hva72"]
+atlas = ExtResource("4_bdr4c")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xvoo6"]
+atlas = ExtResource("4_bdr4c")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_45man"]
+atlas = ExtResource("4_bdr4c")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_38ibi"]
+atlas = ExtResource("4_bdr4c")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_apejo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_35ydl")
+}],
+"loop": true,
+"name": &"hurt",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1x3np")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vtgbx")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_4pgxm")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hva72")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xvoo6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_45man")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_38ibi")
+}],
+"loop": true,
+"name": &"run",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_05iqy"]
+size = Vector2(14, 15)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6jvut"]
+size = Vector2(18, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eiyo8"]
+size = Vector2(14, 6)
+
+[node name="player" type="CharacterBody2D"]
+collision_mask = 94
+script = ExtResource("1_vb5mn")
+
+[node name="animator" type="AnimationPlayer" parent="."]
+
+[node name="anim" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -15)
+sprite_frames = SubResource("SpriteFrames_apejo")
+animation = &"hurt"
+autoplay = "idle"
+
+[node name="collision" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(0, -7.5)
+shape = SubResource("RectangleShape2D_05iqy")
+
+[node name="hurtbox" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="collision" type="CollisionShape2D" parent="hurtbox"]
+visible = false
+position = Vector2(0, -10)
+shape = SubResource("RectangleShape2D_6jvut")
+debug_color = Color(0.839216, 0, 0.109804, 0.419608)
+
+[node name="remote" type="RemoteTransform2D" parent="."]
+
+[node name="ray_right" type="RayCast2D" parent="."]
+position = Vector2(8, -7)
+target_position = Vector2(4, 0)
+collision_mask = 4
+
+[node name="ray_left" type="RayCast2D" parent="."]
+position = Vector2(-8, -7)
+target_position = Vector2(-4, 0)
+collision_mask = 4
+
+[node name="head_collider" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 64
+
+[node name="head_collision" type="CollisionShape2D" parent="head_collider"]
+position = Vector2(0, -16)
+shape = SubResource("RectangleShape2D_eiyo8")
+
+[connection signal="body_entered" from="hurtbox" to="." method="_on_hurtbox_body_entered"]
+[connection signal="body_entered" from="head_collider" to="." method="_on_head_collider_body_entered"]
