@@ -1,1 +1,12 @@
+res://levels/world_02.tscn
 res://shaders/movement_clounds.gdshader
+res://levels/world_01.tscn
+res://actors/player.tscn
+res://actors/enemy.tscn
+res://prefabs/hitbox.tscn
+res://prefabs/dialog_box.tscn
+res://actors/base_patrol.tscn
+res://actors/cherry.tscn
+res://portal.tscn
+res://portal.gd
+res://CHANGELOG.md

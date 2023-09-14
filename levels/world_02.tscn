@@ -1,46 +1,45 @@
-[gd_scene load_steps=50 format=3 uid="uid://btuhq4m3cskby"]
+[gd_scene load_steps=49 format=3 uid="uid://cw5tyis2nxcrk"]
 
-[ext_resource type="Script" path="res://scripts/world_01.gd" id="1_qsjd4"]
-[ext_resource type="Texture2D" uid="uid://bcgvvt7obbd4j" path="res://assets/Seasonal Tilesets/1 - Grassland/Terrain (16 x 16).png" id="1_xlyao"]
-[ext_resource type="Texture2D" uid="uid://bu8sofdc6js46" path="res://assets/Seasonal Tilesets/1 - Grassland/Grassland_entities (16 x 16).png" id="2_hkvko"]
-[ext_resource type="Texture2D" uid="uid://cbbcry7owukeq" path="res://assets/Seasonal Tilesets/1 - Grassland/Extra_plants (16 x 16).png" id="3_yhisr"]
-[ext_resource type="PackedScene" uid="uid://bddjcjdfxpo1r" path="res://actors/player.tscn" id="4_ikw17"]
-[ext_resource type="Texture2D" uid="uid://b33wdi4xshcd0" path="res://assets/Seasonal Tilesets/1 - Grassland/Background parts/5 - Sky_color.png" id="5_cwvin"]
-[ext_resource type="Texture2D" uid="uid://bknmm6fci12m0" path="res://assets/Seasonal Tilesets/5 - Misc. universal tiles/Water_frames (16 x 32).png" id="5_ygew7"]
-[ext_resource type="Texture2D" uid="uid://cu74to82lt2n4" path="res://assets/Seasonal Tilesets/1 - Grassland/Background parts/4 - Cloud_cover_2.png" id="6_rni08"]
-[ext_resource type="Texture2D" uid="uid://d181hdatfx08x" path="res://assets/Seasonal Tilesets/5 - Misc. universal tiles/Lava_frames (16 x 32).png" id="6_vwh3l"]
-[ext_resource type="Shader" path="res://shaders/movement_clounds.gdshader" id="7_3ltlo"]
-[ext_resource type="Texture2D" uid="uid://pk2wqxof2vdl" path="res://assets/Seasonal Tilesets/1 - Grassland/Background parts/3 - Cloud_cover_1.png" id="7_ojcdd"]
-[ext_resource type="Texture2D" uid="uid://dj53pa0tn3swc" path="res://assets/Seasonal Tilesets/1 - Grassland/Background parts/2 - Hills.png" id="8_yhnh8"]
-[ext_resource type="Texture2D" uid="uid://bnumkkuq7gsya" path="res://assets/Seasonal Tilesets/1 - Grassland/Background parts/1 - Foreground_scenery.png" id="9_8sibn"]
-[ext_resource type="PackedScene" uid="uid://m7bfb4xwigyh" path="res://prefabs/moving_platform.tscn" id="11_18d3g"]
-[ext_resource type="PackedScene" uid="uid://bxo70l34a3ip2" path="res://prefabs/coin.tscn" id="12_ogieq"]
-[ext_resource type="PackedScene" uid="uid://b7rvawodyn3et" path="res://actors/enemy.tscn" id="13_jynfp"]
-[ext_resource type="Texture2D" uid="uid://03vnlx12x20l" path="res://assets/mini_ui_buttons-20230912T134915Z-001/mini_ui_buttons/ui_buttons_arrow_left_NORMAL.png" id="15_bv4d0"]
-[ext_resource type="Texture2D" uid="uid://dfwiuh1dwtauq" path="res://assets/mini_ui_buttons-20230912T134915Z-001/mini_ui_buttons/ui_buttons_arrow_left_PRESSED.png" id="16_4tf60"]
-[ext_resource type="Texture2D" uid="uid://dnaqxga2odd8a" path="res://assets/mini_ui_buttons-20230912T134915Z-001/mini_ui_buttons/ui_buttons_arrow_right_NORMAL.png" id="17_a8eok"]
-[ext_resource type="PackedScene" uid="uid://dnuwi4mlf0ra2" path="res://actors/base_patrol.tscn" id="18_gfois"]
-[ext_resource type="Texture2D" uid="uid://ccwjucgnpnrwy" path="res://assets/mini_ui_buttons-20230912T134915Z-001/mini_ui_buttons/ui_buttons_arrow_right_PRESSED.png" id="18_nvqv3"]
-[ext_resource type="Texture2D" uid="uid://0qcgv5asu38w" path="res://assets/mini_ui_buttons-20230912T134915Z-001/mini_ui_buttons/ui_buttons_arrow_up_NORMAL.png" id="19_8dnrt"]
-[ext_resource type="Texture2D" uid="uid://22qohfcbf8xx" path="res://assets/mini_ui_buttons-20230912T134915Z-001/mini_ui_buttons/ui_buttons_arrow_up_PRESSED.png" id="20_wix11"]
-[ext_resource type="PackedScene" uid="uid://dx7u6xxadcmxf" path="res://prefabs/break_box.tscn" id="21_kwfbc"]
-[ext_resource type="PackedScene" uid="uid://bf2hacmcsqbsn" path="res://prefabs/falling_platform.tscn" id="22_d2lr5"]
-[ext_resource type="Texture2D" uid="uid://c8s5ls8lighm5" path="res://assets/Mini FX, Items & UI/Mini UI/Speech_Emotes (16 x 16).png" id="23_05k2y"]
-[ext_resource type="Script" path="res://scripts/warning_sign.gd" id="23_e1gev"]
-[ext_resource type="Texture2D" uid="uid://vobxaayhj7wu" path="res://assets/brick-pieces-20230913T124303Z-001/brick-pieces/Spike.png" id="25_76eev"]
-[ext_resource type="Script" path="res://scripts/spikes-area.gd" id="25_c22te"]
-[ext_resource type="Script" path="res://scripts/hud_manager.gd" id="27_bwnso"]
-[ext_resource type="Texture2D" uid="uid://dgfvrh8yg3sch" path="res://assets/brick-pieces-20230913T124303Z-001/brick-pieces/Coin-Sprites/00_Coin-Sprites.png" id="27_nq3bm"]
-[ext_resource type="Texture2D" uid="uid://byt5ar30rr4lk" path="res://assets/brick-pieces-20230913T124303Z-001/brick-pieces/Coin-Sprites/01_Coin-Sprites.png" id="28_3aiv4"]
-[ext_resource type="Texture2D" uid="uid://dn4vcy65s8hmt" path="res://assets/brick-pieces-20230913T124303Z-001/brick-pieces/Coin-Sprites/02_Coin-Sprites.png" id="29_8uvo8"]
-[ext_resource type="Texture2D" uid="uid://bstuh08nhmt8u" path="res://assets/brick-pieces-20230913T124303Z-001/brick-pieces/Coin-Sprites/03_Coin-Sprites.png" id="30_f4ecb"]
-[ext_resource type="FontFile" uid="uid://ck870aancxob0" path="res://assets/brick-pieces-20230913T113935Z-001/brick-pieces/RevMiniPixel.ttf" id="31_piu47"]
-[ext_resource type="Texture2D" uid="uid://dgcyerwe2a4c3" path="res://assets/brick-pieces-20230913T113935Z-001/brick-pieces/Life-Counter-Icon.png" id="32_jupk0"]
-[ext_resource type="PackedScene" uid="uid://bqmgt1cdyirc6" path="res://portal.tscn" id="37_sknir"]
-[ext_resource type="PackedScene" uid="uid://cw5tyis2nxcrk" path="res://levels/world_02.tscn" id="38_3ev4l"]
+[ext_resource type="Script" path="res://scripts/world_01.gd" id="1_vy808"]
+[ext_resource type="Texture2D" uid="uid://bcgvvt7obbd4j" path="res://assets/Seasonal Tilesets/1 - Grassland/Terrain (16 x 16).png" id="2_gruov"]
+[ext_resource type="Texture2D" uid="uid://bu8sofdc6js46" path="res://assets/Seasonal Tilesets/1 - Grassland/Grassland_entities (16 x 16).png" id="3_ib02h"]
+[ext_resource type="Texture2D" uid="uid://cbbcry7owukeq" path="res://assets/Seasonal Tilesets/1 - Grassland/Extra_plants (16 x 16).png" id="4_2cx0y"]
+[ext_resource type="Texture2D" uid="uid://bknmm6fci12m0" path="res://assets/Seasonal Tilesets/5 - Misc. universal tiles/Water_frames (16 x 32).png" id="5_jo1rq"]
+[ext_resource type="Texture2D" uid="uid://d181hdatfx08x" path="res://assets/Seasonal Tilesets/5 - Misc. universal tiles/Lava_frames (16 x 32).png" id="6_ami7p"]
+[ext_resource type="PackedScene" uid="uid://bxo70l34a3ip2" path="res://prefabs/coin.tscn" id="7_1s71l"]
+[ext_resource type="PackedScene" uid="uid://m7bfb4xwigyh" path="res://prefabs/moving_platform.tscn" id="8_fgpdi"]
+[ext_resource type="PackedScene" uid="uid://bf2hacmcsqbsn" path="res://prefabs/falling_platform.tscn" id="9_4u02y"]
+[ext_resource type="PackedScene" uid="uid://bddjcjdfxpo1r" path="res://actors/player.tscn" id="10_4h6wk"]
+[ext_resource type="Texture2D" uid="uid://b33wdi4xshcd0" path="res://assets/Seasonal Tilesets/1 - Grassland/Background parts/5 - Sky_color.png" id="11_rj6lo"]
+[ext_resource type="Texture2D" uid="uid://cu74to82lt2n4" path="res://assets/Seasonal Tilesets/1 - Grassland/Background parts/4 - Cloud_cover_2.png" id="12_g078t"]
+[ext_resource type="Shader" path="res://shaders/movement_clounds.gdshader" id="13_fsmhu"]
+[ext_resource type="Texture2D" uid="uid://pk2wqxof2vdl" path="res://assets/Seasonal Tilesets/1 - Grassland/Background parts/3 - Cloud_cover_1.png" id="14_ay7td"]
+[ext_resource type="Texture2D" uid="uid://dj53pa0tn3swc" path="res://assets/Seasonal Tilesets/1 - Grassland/Background parts/2 - Hills.png" id="15_4h6qy"]
+[ext_resource type="Texture2D" uid="uid://bnumkkuq7gsya" path="res://assets/Seasonal Tilesets/1 - Grassland/Background parts/1 - Foreground_scenery.png" id="16_ejh7d"]
+[ext_resource type="PackedScene" uid="uid://b7rvawodyn3et" path="res://actors/enemy.tscn" id="17_jhiar"]
+[ext_resource type="PackedScene" uid="uid://dnuwi4mlf0ra2" path="res://actors/base_patrol.tscn" id="18_eevsx"]
+[ext_resource type="Texture2D" uid="uid://03vnlx12x20l" path="res://assets/mini_ui_buttons-20230912T134915Z-001/mini_ui_buttons/ui_buttons_arrow_left_NORMAL.png" id="19_b8s30"]
+[ext_resource type="Texture2D" uid="uid://dfwiuh1dwtauq" path="res://assets/mini_ui_buttons-20230912T134915Z-001/mini_ui_buttons/ui_buttons_arrow_left_PRESSED.png" id="20_3pn8w"]
+[ext_resource type="Texture2D" uid="uid://dnaqxga2odd8a" path="res://assets/mini_ui_buttons-20230912T134915Z-001/mini_ui_buttons/ui_buttons_arrow_right_NORMAL.png" id="21_wvta0"]
+[ext_resource type="Texture2D" uid="uid://ccwjucgnpnrwy" path="res://assets/mini_ui_buttons-20230912T134915Z-001/mini_ui_buttons/ui_buttons_arrow_right_PRESSED.png" id="22_ug47s"]
+[ext_resource type="Texture2D" uid="uid://0qcgv5asu38w" path="res://assets/mini_ui_buttons-20230912T134915Z-001/mini_ui_buttons/ui_buttons_arrow_up_NORMAL.png" id="23_rigix"]
+[ext_resource type="Texture2D" uid="uid://22qohfcbf8xx" path="res://assets/mini_ui_buttons-20230912T134915Z-001/mini_ui_buttons/ui_buttons_arrow_up_PRESSED.png" id="24_qcehl"]
+[ext_resource type="PackedScene" uid="uid://dx7u6xxadcmxf" path="res://prefabs/break_box.tscn" id="25_hh26e"]
+[ext_resource type="Script" path="res://scripts/warning_sign.gd" id="26_nggrj"]
+[ext_resource type="Texture2D" uid="uid://c8s5ls8lighm5" path="res://assets/Mini FX, Items & UI/Mini UI/Speech_Emotes (16 x 16).png" id="27_w1sc6"]
+[ext_resource type="Script" path="res://scripts/spikes-area.gd" id="28_oo2u8"]
+[ext_resource type="Texture2D" uid="uid://vobxaayhj7wu" path="res://assets/brick-pieces-20230913T124303Z-001/brick-pieces/Spike.png" id="29_pxcbx"]
+[ext_resource type="Script" path="res://scripts/hud_manager.gd" id="30_tyqqa"]
+[ext_resource type="Texture2D" uid="uid://dgfvrh8yg3sch" path="res://assets/brick-pieces-20230913T124303Z-001/brick-pieces/Coin-Sprites/00_Coin-Sprites.png" id="31_yv7ur"]
+[ext_resource type="Texture2D" uid="uid://byt5ar30rr4lk" path="res://assets/brick-pieces-20230913T124303Z-001/brick-pieces/Coin-Sprites/01_Coin-Sprites.png" id="32_w7cst"]
+[ext_resource type="Texture2D" uid="uid://dn4vcy65s8hmt" path="res://assets/brick-pieces-20230913T124303Z-001/brick-pieces/Coin-Sprites/02_Coin-Sprites.png" id="33_ejmhy"]
+[ext_resource type="Texture2D" uid="uid://bstuh08nhmt8u" path="res://assets/brick-pieces-20230913T124303Z-001/brick-pieces/Coin-Sprites/03_Coin-Sprites.png" id="34_v4ikp"]
+[ext_resource type="FontFile" uid="uid://ck870aancxob0" path="res://assets/brick-pieces-20230913T113935Z-001/brick-pieces/RevMiniPixel.ttf" id="35_d3bh8"]
+[ext_resource type="Texture2D" uid="uid://dgcyerwe2a4c3" path="res://assets/brick-pieces-20230913T113935Z-001/brick-pieces/Life-Counter-Icon.png" id="36_70p78"]
+[ext_resource type="PackedScene" uid="uid://bqmgt1cdyirc6" path="res://portal.tscn" id="37_72d0t"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ll1cg"]
-texture = ExtResource("1_xlyao")
+texture = ExtResource("2_gruov")
 3:1/0 = 0
 3:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 3:1/0/physics_layer_0/angular_velocity = 0.0
@@ -195,7 +194,7 @@ texture = ExtResource("1_xlyao")
 4:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yqx5u"]
-texture = ExtResource("2_hkvko")
+texture = ExtResource("3_ib02h")
 1:1/size_in_atlas = Vector2i(3, 3)
 1:1/0 = 0
 1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -252,7 +251,7 @@ texture = ExtResource("2_hkvko")
 15:2/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qayu6"]
-texture = ExtResource("3_yhisr")
+texture = ExtResource("4_2cx0y")
 1:1/size_in_atlas = Vector2i(3, 3)
 1:1/0 = 0
 1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -263,7 +262,7 @@ texture = ExtResource("3_yhisr")
 5:2/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dvjy7"]
-texture = ExtResource("5_ygew7")
+texture = ExtResource("5_jo1rq")
 0:0/animation_columns = 2
 0:0/animation_frame_0/duration = 1.0
 0:0/animation_frame_1/duration = 1.0
@@ -275,7 +274,7 @@ texture = ExtResource("5_ygew7")
 0:1/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_iqw4f"]
-texture = ExtResource("6_vwh3l")
+texture = ExtResource("6_ami7p")
 0:0/animation_columns = 4
 0:0/animation_frame_0/duration = 0.2
 0:0/animation_frame_1/duration = 0.2
@@ -298,7 +297,7 @@ sources/4 = SubResource("TileSetAtlasSource_dvjy7")
 sources/5 = SubResource("TileSetAtlasSource_iqw4f")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_bovp4"]
-shader = ExtResource("7_3ltlo")
+shader = ExtResource("13_fsmhu")
 shader_parameter/move_speed = 0.1
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2t7wj"]
@@ -310,19 +309,19 @@ size = Vector2(160, 14)
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_j7oyn"]
 frames = 4
 speed_scale = 3.0
-frame_0/texture = ExtResource("27_nq3bm")
-frame_1/texture = ExtResource("28_3aiv4")
+frame_0/texture = ExtResource("31_yv7ur")
+frame_1/texture = ExtResource("32_w7cst")
 frame_1/duration = 1.0
-frame_2/texture = ExtResource("29_8uvo8")
+frame_2/texture = ExtResource("33_ejmhy")
 frame_2/duration = 1.0
-frame_3/texture = ExtResource("30_f4ecb")
+frame_3/texture = ExtResource("34_v4ikp")
 frame_3/duration = 1.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nktgp"]
 size = Vector2(20, 64)
 
 [node name="World-01" type="Node2D"]
-script = ExtResource("1_qsjd4")
+script = ExtResource("1_vy808")
 
 [node name="level" type="TileMap" parent="."]
 position = Vector2(8, 0)
@@ -347,103 +346,103 @@ layer_2/tile_data = PackedInt32Array(131150, 458752, 4, 131149, 393216, 4, 13114
 
 [node name="coins" type="Node2D" parent="."]
 
-[node name="coin" parent="coins" instance=ExtResource("12_ogieq")]
+[node name="coin" parent="coins" instance=ExtResource("7_1s71l")]
 position = Vector2(216, 72)
 
-[node name="coin2" parent="coins" instance=ExtResource("12_ogieq")]
+[node name="coin2" parent="coins" instance=ExtResource("7_1s71l")]
 position = Vector2(216, 24)
 
-[node name="coin3" parent="coins" instance=ExtResource("12_ogieq")]
+[node name="coin3" parent="coins" instance=ExtResource("7_1s71l")]
 position = Vector2(152, 24)
 
-[node name="coin4" parent="coins" instance=ExtResource("12_ogieq")]
+[node name="coin4" parent="coins" instance=ExtResource("7_1s71l")]
 position = Vector2(104, -8)
 
-[node name="coin5" parent="coins" instance=ExtResource("12_ogieq")]
+[node name="coin5" parent="coins" instance=ExtResource("7_1s71l")]
 position = Vector2(-56, 136)
 
-[node name="coin6" parent="coins" instance=ExtResource("12_ogieq")]
+[node name="coin6" parent="coins" instance=ExtResource("7_1s71l")]
 position = Vector2(152, 72)
 
-[node name="coin7" parent="coins" instance=ExtResource("12_ogieq")]
+[node name="coin7" parent="coins" instance=ExtResource("7_1s71l")]
 position = Vector2(488, 56)
 
-[node name="coin8" parent="coins" instance=ExtResource("12_ogieq")]
+[node name="coin8" parent="coins" instance=ExtResource("7_1s71l")]
 position = Vector2(520, 56)
 
-[node name="coin9" parent="coins" instance=ExtResource("12_ogieq")]
+[node name="coin9" parent="coins" instance=ExtResource("7_1s71l")]
 position = Vector2(648, 144)
 
-[node name="coin10" parent="coins" instance=ExtResource("12_ogieq")]
+[node name="coin10" parent="coins" instance=ExtResource("7_1s71l")]
 position = Vector2(680, 144)
 
-[node name="coin11" parent="coins" instance=ExtResource("12_ogieq")]
+[node name="coin11" parent="coins" instance=ExtResource("7_1s71l")]
 position = Vector2(840, 64)
 
-[node name="coin12" parent="coins" instance=ExtResource("12_ogieq")]
+[node name="coin12" parent="coins" instance=ExtResource("7_1s71l")]
 position = Vector2(840, 24)
 
-[node name="coin13" parent="coins" instance=ExtResource("12_ogieq")]
+[node name="coin13" parent="coins" instance=ExtResource("7_1s71l")]
 position = Vector2(840, -16)
 
-[node name="coin14" parent="coins" instance=ExtResource("12_ogieq")]
+[node name="coin14" parent="coins" instance=ExtResource("7_1s71l")]
 position = Vector2(744, -40)
 
-[node name="coin15" parent="coins" instance=ExtResource("12_ogieq")]
+[node name="coin15" parent="coins" instance=ExtResource("7_1s71l")]
 position = Vector2(680, 0)
 
-[node name="coin16" parent="coins" instance=ExtResource("12_ogieq")]
+[node name="coin16" parent="coins" instance=ExtResource("7_1s71l")]
 position = Vector2(912, 121)
 
-[node name="coin17" parent="coins" instance=ExtResource("12_ogieq")]
+[node name="coin17" parent="coins" instance=ExtResource("7_1s71l")]
 position = Vector2(984, 121)
 
-[node name="coin18" parent="coins" instance=ExtResource("12_ogieq")]
+[node name="coin18" parent="coins" instance=ExtResource("7_1s71l")]
 position = Vector2(1192, -8)
 
-[node name="coin19" parent="coins" instance=ExtResource("12_ogieq")]
+[node name="coin19" parent="coins" instance=ExtResource("7_1s71l")]
 position = Vector2(1344, -40)
 
-[node name="coin20" parent="coins" instance=ExtResource("12_ogieq")]
+[node name="coin20" parent="coins" instance=ExtResource("7_1s71l")]
 position = Vector2(1464, 3)
 
-[node name="coin21" parent="coins" instance=ExtResource("12_ogieq")]
+[node name="coin21" parent="coins" instance=ExtResource("7_1s71l")]
 position = Vector2(1496, 3)
 
-[node name="coin22" parent="coins" instance=ExtResource("12_ogieq")]
+[node name="coin22" parent="coins" instance=ExtResource("7_1s71l")]
 position = Vector2(1560, -64)
 
-[node name="coin23" parent="coins" instance=ExtResource("12_ogieq")]
+[node name="coin23" parent="coins" instance=ExtResource("7_1s71l")]
 position = Vector2(2072, 56)
 
-[node name="coin24" parent="coins" instance=ExtResource("12_ogieq")]
+[node name="coin24" parent="coins" instance=ExtResource("7_1s71l")]
 position = Vector2(2040, 113)
 
-[node name="coin25" parent="coins" instance=ExtResource("12_ogieq")]
+[node name="coin25" parent="coins" instance=ExtResource("7_1s71l")]
 position = Vector2(1944, 40)
 
-[node name="moving_platform" parent="." instance=ExtResource("11_18d3g")]
+[node name="moving_platform" parent="." instance=ExtResource("8_fgpdi")]
 position = Vector2(310, 3)
 
-[node name="moving_platform2" parent="." instance=ExtResource("11_18d3g")]
+[node name="moving_platform2" parent="." instance=ExtResource("8_fgpdi")]
 position = Vector2(841, 121)
 distance = 190
 move_horizontal = false
 
-[node name="moving_platform3" parent="." instance=ExtResource("11_18d3g")]
+[node name="moving_platform3" parent="." instance=ExtResource("8_fgpdi")]
 position = Vector2(1264, -23)
 
-[node name="falling-platform" parent="." instance=ExtResource("22_d2lr5")]
+[node name="falling-platform" parent="." instance=ExtResource("9_4u02y")]
 position = Vector2(600, 88)
 
-[node name="falling-platform2" parent="." instance=ExtResource("22_d2lr5")]
+[node name="falling-platform2" parent="." instance=ExtResource("9_4u02y")]
 position = Vector2(912, 144)
 
-[node name="falling-platform3" parent="." instance=ExtResource("22_d2lr5")]
+[node name="falling-platform3" parent="." instance=ExtResource("9_4u02y")]
 position = Vector2(984, 144)
 
-[node name="player" parent="." instance=ExtResource("4_ikw17")]
-position = Vector2(-112, -32)
+[node name="player" parent="." instance=ExtResource("10_4h6wk")]
+position = Vector2(1856, -13)
 
 [node name="BG" type="ParallaxBackground" parent="."]
 
@@ -454,7 +453,7 @@ motion_mirroring = Vector2(432, 0)
 
 [node name="texture" type="Sprite2D" parent="BG/05"]
 scale = Vector2(1.5, 1.5)
-texture = ExtResource("5_cwvin")
+texture = ExtResource("11_rj6lo")
 centered = false
 
 [node name="04" type="ParallaxLayer" parent="BG"]
@@ -464,7 +463,7 @@ motion_mirroring = Vector2(432, 0)
 
 [node name="back_clauds" type="Sprite2D" parent="BG/04"]
 scale = Vector2(1.5, 1.5)
-texture = ExtResource("6_rni08")
+texture = ExtResource("12_g078t")
 centered = false
 
 [node name="03" type="ParallaxLayer" parent="BG"]
@@ -476,7 +475,7 @@ motion_mirroring = Vector2(432, 0)
 texture_repeat = 2
 material = SubResource("ShaderMaterial_bovp4")
 scale = Vector2(1.5, 1.5)
-texture = ExtResource("7_ojcdd")
+texture = ExtResource("14_ay7td")
 centered = false
 
 [node name="02" type="ParallaxLayer" parent="BG"]
@@ -486,7 +485,7 @@ motion_mirroring = Vector2(432, 0)
 
 [node name="texture" type="Sprite2D" parent="BG/02"]
 scale = Vector2(1.5, 1.5)
-texture = ExtResource("8_yhnh8")
+texture = ExtResource("15_4h6qy")
 centered = false
 
 [node name="01" type="ParallaxLayer" parent="BG"]
@@ -496,7 +495,7 @@ motion_mirroring = Vector2(432, 0)
 
 [node name="texture" type="Sprite2D" parent="BG/01"]
 scale = Vector2(1.5, 1.5)
-texture = ExtResource("9_8sibn")
+texture = ExtResource("16_ejh7d")
 centered = false
 
 [node name="camera" type="Camera2D" parent="."]
@@ -509,74 +508,74 @@ editor_draw_drag_margin = true
 
 [node name="enemies" type="Node2D" parent="."]
 
-[node name="enemy" parent="enemies" instance=ExtResource("13_jynfp")]
+[node name="enemy" parent="enemies" instance=ExtResource("17_jhiar")]
 position = Vector2(344, 160)
 
-[node name="enemy2" parent="enemies" instance=ExtResource("13_jynfp")]
+[node name="enemy2" parent="enemies" instance=ExtResource("17_jhiar")]
 position = Vector2(720, 160)
 
-[node name="enemy3" parent="enemies" instance=ExtResource("13_jynfp")]
+[node name="enemy3" parent="enemies" instance=ExtResource("17_jhiar")]
 position = Vector2(672, 8)
 
-[node name="enemy4" parent="enemies" instance=ExtResource("13_jynfp")]
+[node name="enemy4" parent="enemies" instance=ExtResource("17_jhiar")]
 position = Vector2(128, 160)
 
 [node name="enemies2" type="Node2D" parent="."]
 
-[node name="base_patrol" parent="enemies2" instance=ExtResource("18_gfois")]
+[node name="base_patrol" parent="enemies2" instance=ExtResource("18_eevsx")]
 position = Vector2(1096, 104)
 
-[node name="base_patrol2" parent="enemies2" instance=ExtResource("18_gfois")]
+[node name="base_patrol2" parent="enemies2" instance=ExtResource("18_eevsx")]
 position = Vector2(1497, 3)
 
-[node name="base_patrol3" parent="enemies2" instance=ExtResource("18_gfois")]
+[node name="base_patrol3" parent="enemies2" instance=ExtResource("18_eevsx")]
 position = Vector2(1944, 3)
 
-[node name="base_patrol4" parent="enemies2" instance=ExtResource("18_gfois")]
+[node name="base_patrol4" parent="enemies2" instance=ExtResource("18_eevsx")]
 position = Vector2(2024, 160)
 
 [node name="controls" type="CanvasLayer" parent="."]
 
 [node name="ui_left" type="TouchScreenButton" parent="controls"]
 position = Vector2(24, 112)
-texture_normal = ExtResource("15_bv4d0")
-texture_pressed = ExtResource("16_4tf60")
+texture_normal = ExtResource("19_b8s30")
+texture_pressed = ExtResource("20_3pn8w")
 action = "ui_left"
 visibility_mode = 1
 
 [node name="ui_right" type="TouchScreenButton" parent="controls"]
 position = Vector2(56, 112)
-texture_normal = ExtResource("17_a8eok")
-texture_pressed = ExtResource("18_nvqv3")
+texture_normal = ExtResource("21_wvta0")
+texture_pressed = ExtResource("22_ug47s")
 action = "ui_right"
 visibility_mode = 1
 
 [node name="ui_jump" type="TouchScreenButton" parent="controls"]
 position = Vector2(264, 112)
-texture_normal = ExtResource("19_8dnrt")
-texture_pressed = ExtResource("20_wix11")
+texture_normal = ExtResource("23_rigix")
+texture_pressed = ExtResource("24_qcehl")
 action = "ui_accept"
 visibility_mode = 1
 
-[node name="break-box" parent="." instance=ExtResource("21_kwfbc")]
+[node name="break-box" parent="." instance=ExtResource("25_hh26e")]
 position = Vector2(680, -40)
 
-[node name="break-box2" parent="." instance=ExtResource("21_kwfbc")]
+[node name="break-box2" parent="." instance=ExtResource("25_hh26e")]
 position = Vector2(104, -48)
 
-[node name="break-box3" parent="." instance=ExtResource("21_kwfbc")]
+[node name="break-box3" parent="." instance=ExtResource("25_hh26e")]
 position = Vector2(-8, 128)
 
-[node name="break-box4" parent="." instance=ExtResource("21_kwfbc")]
+[node name="break-box4" parent="." instance=ExtResource("25_hh26e")]
 position = Vector2(504, 24)
 
 [node name="warning_sign" type="Node2D" parent="."]
 position = Vector2(40, -24)
-script = ExtResource("23_e1gev")
+script = ExtResource("26_nggrj")
 
 [node name="texture" type="Sprite2D" parent="warning_sign"]
 position = Vector2(0, -16)
-texture = ExtResource("23_05k2y")
+texture = ExtResource("27_w1sc6")
 region_enabled = true
 region_rect = Rect2(0, 0, 16, 16)
 
@@ -590,28 +589,28 @@ shape = SubResource("RectangleShape2D_2t7wj")
 [node name="spikes-area" type="Area2D" parent="."]
 position = Vector2(944, 172)
 collision_layer = 2
-script = ExtResource("25_c22te")
+script = ExtResource("28_oo2u8")
 
 [node name="collision" type="CollisionShape2D" parent="spikes-area"]
 shape = SubResource("RectangleShape2D_551up")
 
 [node name="spikes" type="Sprite2D" parent="spikes-area"]
 texture_repeat = 2
-texture = ExtResource("25_76eev")
+texture = ExtResource("29_pxcbx")
 region_enabled = true
 region_rect = Rect2(0, 8, 160, 8)
 
 [node name="spikes-area2" type="Area2D" parent="."]
 position = Vector2(1344, 120)
 collision_layer = 2
-script = ExtResource("25_c22te")
+script = ExtResource("28_oo2u8")
 
 [node name="collision" type="CollisionShape2D" parent="spikes-area2"]
 shape = SubResource("RectangleShape2D_551up")
 
 [node name="spikes" type="Sprite2D" parent="spikes-area2"]
 texture_repeat = 2
-texture = ExtResource("25_76eev")
+texture = ExtResource("29_pxcbx")
 region_enabled = true
 region_rect = Rect2(0, 8, 160, 8)
 
@@ -624,7 +623,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("27_bwnso")
+script = ExtResource("30_tyqqa")
 default_minutes = 2
 default_seconds = 59
 
@@ -658,7 +657,7 @@ texture = SubResource("AnimatedTexture_j7oyn")
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 4
-theme_override_fonts/font = ExtResource("31_piu47")
+theme_override_fonts/font = ExtResource("35_d3bh8")
 theme_override_font_sizes/font_size = 8
 text = "0000"
 vertical_alignment = 1
@@ -672,7 +671,7 @@ size_flags_vertical = 0
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 4
-theme_override_fonts/font = ExtResource("31_piu47")
+theme_override_fonts/font = ExtResource("35_d3bh8")
 theme_override_font_sizes/font_size = 8
 text = "TIME:"
 vertical_alignment = 1
@@ -681,7 +680,7 @@ vertical_alignment = 1
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 4
-theme_override_fonts/font = ExtResource("31_piu47")
+theme_override_fonts/font = ExtResource("35_d3bh8")
 theme_override_font_sizes/font_size = 8
 text = "00:00"
 vertical_alignment = 1
@@ -695,7 +694,7 @@ size_flags_vertical = 0
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 4
-theme_override_fonts/font = ExtResource("31_piu47")
+theme_override_fonts/font = ExtResource("35_d3bh8")
 theme_override_font_sizes/font_size = 8
 text = "SCORE:"
 vertical_alignment = 1
@@ -704,7 +703,7 @@ vertical_alignment = 1
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 4
-theme_override_fonts/font = ExtResource("31_piu47")
+theme_override_fonts/font = ExtResource("35_d3bh8")
 theme_override_font_sizes/font_size = 8
 text = "000000"
 vertical_alignment = 1
@@ -718,13 +717,13 @@ size_flags_vertical = 8
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
-texture = ExtResource("32_jupk0")
+texture = ExtResource("36_70p78")
 
 [node name="life_separator" type="Label" parent="HUD/control/container/life_container"]
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 4
-theme_override_fonts/font = ExtResource("31_piu47")
+theme_override_fonts/font = ExtResource("35_d3bh8")
 theme_override_font_sizes/font_size = 8
 text = "X"
 vertical_alignment = 1
@@ -733,14 +732,14 @@ vertical_alignment = 1
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 4
-theme_override_fonts/font = ExtResource("31_piu47")
+theme_override_fonts/font = ExtResource("35_d3bh8")
 theme_override_font_sizes/font_size = 8
 text = "03"
 vertical_alignment = 1
 
-[node name="portal" parent="." instance=ExtResource("37_sknir")]
-position = Vector2(16, 160)
-room = ExtResource("38_3ev4l")
+[node name="portal" parent="." instance=ExtResource("37_72d0t")]
+position = Vector2(1880, 155)
+room = null
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="portal"]
