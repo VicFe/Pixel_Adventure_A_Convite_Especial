@@ -1,8 +1,8 @@
-Label
+CollisionShape2D
 AnimationPlayer
+Label
 ColorRect
 CanvasLayer
-CollisionShape2D
 Area2D
 AnimatedSprite2D
 CharacterBody2D

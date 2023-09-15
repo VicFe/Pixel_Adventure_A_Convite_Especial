@@ -1,26 +1,26 @@
 [gd_scene load_steps=14 format=3 uid="uid://dnuwi4mlf0ra2"]
 
 [ext_resource type="Script" path="res://scripts/rocket_cherry.gd" id="1_8afin"]
-[ext_resource type="Texture2D" uid="uid://bnwq4dnqa4a2" path="res://assets/Sprite Pack 2/7 - Rocket Cherry/Flying (16 x 32).png" id="1_vo7gs"]
-[ext_resource type="Texture2D" uid="uid://bml0r8o1omwxt" path="res://assets/Sprite Pack 2/7 - Rocket Cherry/Hurt_Falling (16 x 32).png" id="2_aasmq"]
+[ext_resource type="Texture2D" uid="uid://bnwq4dnqa4a2" path="res://assets/Sprite Pack 2/7 - Rocket Cherry/Flying (16 x 32).png" id="2_o85wf"]
 [ext_resource type="PackedScene" uid="uid://f5jha3y62jdi" path="res://prefabs/hitbox.tscn" id="3_5652l"]
+[ext_resource type="Texture2D" uid="uid://bt3mtr0k1h8ae" path="res://assets/Sprite Pack 2/7 - Rocket Cherry/Hurt (16 x 32).png" id="3_mmimg"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_50tul"]
-atlas = ExtResource("1_vo7gs")
+[sub_resource type="AtlasTexture" id="AtlasTexture_etg3b"]
+atlas = ExtResource("2_o85wf")
 region = Rect2(0, 0, 16, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_fpydn"]
-atlas = ExtResource("1_vo7gs")
+[sub_resource type="AtlasTexture" id="AtlasTexture_oa21a"]
+atlas = ExtResource("2_o85wf")
 region = Rect2(16, 0, 16, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_258cn"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_50tul")
+"texture": SubResource("AtlasTexture_etg3b")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_fpydn")
+"texture": SubResource("AtlasTexture_oa21a")
 }],
 "loop": true,
 "name": &"flying",
@@ -28,7 +28,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_aasmq")
+"texture": ExtResource("3_mmimg")
 }],
 "loop": false,
 "name": &"hurt",
@@ -36,7 +36,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_775j0"]
-size = Vector2(12, 10)
+size = Vector2(15, 11)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pjcmk"]
 size = Vector2(14, 3)
