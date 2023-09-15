@@ -1,9 +1,10 @@
-res://actors/base_patrol.tscn
-res://shaders/movement_clounds.gdshader
 res://levels/world_01.tscn
+res://shaders/movement_clounds.gdshader
 res://levels/world_02.tscn
 res://actors/player.tscn
 res://actors/enemy.tscn
+res://actors/base_patrol.tscn
 res://actors/enemy_devil.tscn
 res://actors/enemy_bird.tscn
 res://actors/enemy_armored.tscn
+res://scripts/world_01.gd

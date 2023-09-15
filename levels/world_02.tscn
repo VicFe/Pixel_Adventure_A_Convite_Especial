@@ -2323,7 +2323,7 @@ layer_2/tile_data = PackedInt32Array()
 metadata/_edit_group_ = true
 
 [node name="player" parent="." instance=ExtResource("10_4h6wk")]
-position = Vector2(184, 40)
+position = Vector2(-168, 176)
 
 [node name="BG" type="ParallaxBackground" parent="."]
 
