@@ -739,7 +739,7 @@ text = "03"
 vertical_alignment = 1
 
 [node name="portal" parent="." instance=ExtResource("37_sknir")]
-position = Vector2(16, 160)
+position = Vector2(1744, 155)
 room = ExtResource("38_3ev4l")
 metadata/_edit_group_ = true
 
