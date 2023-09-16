@@ -7,4 +7,7 @@ res://actors/base_patrol.tscn
 res://actors/enemy_devil.tscn
 res://actors/enemy_bird.tscn
 res://actors/enemy_armored.tscn
+res://scripts/collision_lava.gd
 res://scripts/world_01.gd
+res://scripts/lava-area.gd
+res://levels/world_03.tscn
