@@ -2561,6 +2561,13 @@ texture_pressed = ExtResource("20_wix11")
 action = "ui_accept"
 visibility_mode = 1
 
+[node name="ui_menu" type="TouchScreenButton" parent="controls"]
+position = Vector2(30, 12)
+texture_normal = ExtResource("19_8dnrt")
+texture_pressed = ExtResource("20_wix11")
+action = "ui_cancel"
+visibility_mode = 1
+
 [node name="break-box" parent="." instance=ExtResource("21_kwfbc")]
 position = Vector2(680, -40)
 

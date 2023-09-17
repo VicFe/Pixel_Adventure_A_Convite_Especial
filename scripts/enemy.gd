@@ -52,3 +52,9 @@ func spawn_new_enemy():
 	var instance_scene = spawn_instance.instantiate()
 	get_tree().root.add_child(instance_scene)
 	instance_scene.global_position = spawn_instance_position.global_position
+
+func reset_enemy():
+	queue_free() 
+	var new_enemy = spawn_instance.instantiate()
+	get_tree().root.add_child(new_enemy)
+	new_enemy.global_position = spawn_instance_position.global_position

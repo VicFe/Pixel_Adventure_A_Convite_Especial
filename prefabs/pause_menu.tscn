@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://b2a6vmqqi2gry"]
+[gd_scene load_steps=8 format=3 uid="uid://b2a6vmqqi2gry"]
 
 [ext_resource type="Script" path="res://scripts/pause_menu.gd" id="1_84vp6"]
 [ext_resource type="Theme" uid="uid://tq2f5p13ryky" path="res://pause_menu.tres" id="1_ha51v"]
@@ -8,6 +8,12 @@ action = &"ui_cancel"
 
 [sub_resource type="Shortcut" id="Shortcut_pr8qk"]
 events = [SubResource("InputEventAction_fb1lv")]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mimra"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p4ro1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_02nln"]
 
 [node name="pause_menu" type="CanvasLayer"]
 process_mode = 3
@@ -49,12 +55,24 @@ theme = ExtResource("1_ha51v")
 text = "QUIT GAME
 "
 
-[node name="pause_btn_mobile" type="TouchScreenButton" parent="menu_holder"]
+[node name="resume_btn_mobile" type="TouchScreenButton" parent="menu_holder"]
+position = Vector2(317, 6.5)
+scale = Vector2(3.24, 1)
+shape = SubResource("RectangleShape2D_mimra")
 
 [node name="quit_btn_mobile" type="TouchScreenButton" parent="menu_holder"]
+position = Vector2(317, 45.5)
+scale = Vector2(4.52, 1)
+shape = SubResource("RectangleShape2D_p4ro1")
 
 [node name="restart_btn_mobile" type="TouchScreenButton" parent="menu_holder"]
+position = Vector2(317, 25.5)
+scale = Vector2(3.88, 1)
+shape = SubResource("RectangleShape2D_02nln")
 
 [connection signal="pressed" from="menu_holder/resume_btn_computer" to="." method="_on_resume_btn_computer_pressed"]
 [connection signal="pressed" from="menu_holder/restart_btn_computer" to="." method="_on_restart_btn_computer_pressed"]
 [connection signal="pressed" from="menu_holder/quit_btn_computer" to="." method="_on_quit_btn_computer_pressed"]
+[connection signal="pressed" from="menu_holder/resume_btn_mobile" to="." method="_on_resume_btn_mobile_pressed"]
+[connection signal="pressed" from="menu_holder/quit_btn_mobile" to="." method="_on_quit_btn_mobile_pressed"]
+[connection signal="pressed" from="menu_holder/restart_btn_mobile" to="." method="_on_restart_btn_mobile_pressed"]

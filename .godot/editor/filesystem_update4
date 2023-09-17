@@ -6,11 +6,8 @@ res://actors/player.tscn
 res://actors/enemy.tscn
 res://actors/base_patrol.tscn
 res://actors/enemy_devil.tscn
-res://actors/enemy_bird.tscn
 res://actors/enemy_armored.tscn
-res://singeltons/globals.gd
-res://scripts/world_01.gd
 res://prefabs/checkpoint.tscn
-res://scripts/checkpoint.gd
 res://prefabs/pause_menu.tscn
 res://scripts/pause_menu.gd
+res://scripts/enemy.gd

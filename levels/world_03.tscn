@@ -2355,6 +2355,13 @@ texture_pressed = ExtResource("17_bub0a")
 action = "ui_accept"
 visibility_mode = 1
 
+[node name="ui_menu" type="TouchScreenButton" parent="controls"]
+position = Vector2(30, 12)
+texture_normal = ExtResource("16_t4356")
+texture_pressed = ExtResource("17_bub0a")
+action = "ui_cancel"
+visibility_mode = 1
+
 [node name="HUD" type="CanvasLayer" parent="."]
 
 [node name="control" type="Control" parent="HUD"]

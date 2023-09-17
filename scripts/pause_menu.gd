@@ -3,6 +3,9 @@ extends CanvasLayer
 @onready var resume_btn_computer = $menu_holder/resume_btn_computer
 @onready var restart_btn_computer = $menu_holder/restart_btn_computer
 @onready var quit_btn_computer = $menu_holder/quit_btn_computer
+@onready var resume_btn_mobile = $menu_holder/resume_btn_mobile
+@onready var quit_btn_mobile = $menu_holder/quit_btn_mobile
+@onready var restart_btn_mobile = $menu_holder/restart_btn_mobile
 
 func _ready():
 	visible = false 
@@ -25,3 +28,13 @@ func _on_quit_btn_computer_pressed():
 func _on_resume_btn_computer_pressed():
 	get_tree().paused = false
 	visible = false
+
+func _on_quit_btn_mobile_pressed():
+	get_tree().quit()
+
+func _on_restart_btn_mobile_pressed():
+	pass
+
+func _on_resume_btn_mobile_pressed():
+	get_tree().paused = false
+	visible = false 
