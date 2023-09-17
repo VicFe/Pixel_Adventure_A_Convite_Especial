@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://clj341xyn764f"]
+[gd_scene load_steps=37 format=3 uid="uid://clj341xyn764f"]
 
 [ext_resource type="Script" path="res://scripts/world_01.gd" id="1_5j7qa"]
 [ext_resource type="Texture2D" uid="uid://bcgvvt7obbd4j" path="res://assets/Seasonal Tilesets/1 - Grassland/Terrain (16 x 16).png" id="2_ma4x1"]
@@ -24,6 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://bstuh08nhmt8u" path="res://assets/brick-pieces-20230913T124303Z-001/brick-pieces/Coin-Sprites/03_Coin-Sprites.png" id="22_snne2"]
 [ext_resource type="FontFile" uid="uid://ck870aancxob0" path="res://assets/brick-pieces-20230913T113935Z-001/brick-pieces/RevMiniPixel.ttf" id="23_1itth"]
 [ext_resource type="Texture2D" uid="uid://dgcyerwe2a4c3" path="res://assets/brick-pieces-20230913T113935Z-001/brick-pieces/Life-Counter-Icon.png" id="24_4jg6r"]
+[ext_resource type="PackedScene" uid="uid://b2a6vmqqi2gry" path="res://prefabs/pause_menu.tscn" id="25_6iti3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ll1cg"]
 texture = ExtResource("2_ma4x1")
@@ -2476,5 +2477,7 @@ theme_override_fonts/font = ExtResource("23_1itth")
 theme_override_font_sizes/font_size = 8
 text = "03"
 vertical_alignment = 1
+
+[node name="pause_menu" parent="." instance=ExtResource("25_6iti3")]
 
 [connection signal="timeout" from="HUD/control/clock_timer" to="HUD/control" method="_on_clock_timer_timeout" flags=18]

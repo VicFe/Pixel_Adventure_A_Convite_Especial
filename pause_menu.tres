@@ -1,0 +1,22 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://tq2f5p13ryky"]
+
+[ext_resource type="FontFile" uid="uid://8f4v7uqybokv" path="res://assets/brick-pieces-20230913T124303Z-001/brick-pieces/RevMiniPixel.ttf" id="1_8b02u"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f0gf1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4yobq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_smr27"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iddlv"]
+
+[resource]
+Button/colors/font_focus_color = Color(0.94902, 0.94902, 0, 1)
+Button/colors/font_hover_color = Color(0.94902, 0.94902, 0, 1)
+Button/colors/font_hover_pressed_color = Color(1, 1, 0, 1)
+Button/colors/font_pressed_color = Color(0.811765, 0.439216, 0, 1)
+Button/fonts/font = ExtResource("1_8b02u")
+Button/styles/focus = SubResource("StyleBoxEmpty_f0gf1")
+Button/styles/hover = SubResource("StyleBoxEmpty_4yobq")
+Button/styles/normal = SubResource("StyleBoxEmpty_smr27")
+Button/styles/pressed = SubResource("StyleBoxEmpty_iddlv")

@@ -1,5 +1,8 @@
-res://levels
 res://scripts
+res://
+res://prefabs
+res://assets
+res://levels
 res://actors
 res://assets/Sprite Pack 2/7 - Rocket Cherry
 res://assets/Sprite Pack 1/8 - Chi Chi the Bird
@@ -7,9 +10,7 @@ res://assets/Sprite Pack 1/3 - Princess Sera
 G:/projects/Godot-4.0.1/Pixel_Adventure_A_Convite_Especial/android
 C:/Users/breno/AppData/Local/Android/Sdk
 C:/Users/breno/.android
-res://
 res://singeltons
-res://prefabs
 res://assets/Mini FX, Items & UI/Effects
 res://assets/Mini FX, Items & UI/Common Pick-ups
 res://shaders

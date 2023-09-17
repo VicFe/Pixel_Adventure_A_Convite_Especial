@@ -1,10 +1,13 @@
 CollisionShape2D
+ColorRect
+TouchScreenButton
+Button
+VBoxContainer
+CanvasLayer
+AnimatedSprite2D
 Area2D
 AnimationPlayer
 Label
-ColorRect
-CanvasLayer
-AnimatedSprite2D
 CharacterBody2D
 Marker2D
 RemoteTransform2D
@@ -21,7 +24,6 @@ NinePatchRect
 AnimatableBody2D
 RigidBody2D
 VisibleOnScreenNotifier2D
-TouchScreenButton
 RayCast2D
 ParallaxLayer
 ParallaxBackground
