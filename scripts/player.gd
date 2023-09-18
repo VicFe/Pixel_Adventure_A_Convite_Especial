@@ -13,6 +13,7 @@ var direction
 
 @onready var animation := $anim as AnimatedSprite2D
 @onready var remote_transform := $remote as RemoteTransform2D 
+@onready var jump_fx = $jumpFX as AudioStreamPlayer2D
 
 signal player_has_died()
 
@@ -24,6 +25,7 @@ func _physics_process(delta):
 	# Handle Jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_FORCE
+		jump_fx.play()
 		is_jumping = true
 	elif is_on_floor(): 
 		is_jumping = false

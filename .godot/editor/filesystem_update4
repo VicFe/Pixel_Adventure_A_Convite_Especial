@@ -6,8 +6,11 @@ res://actors/player.tscn
 res://actors/enemy.tscn
 res://actors/base_patrol.tscn
 res://actors/enemy_devil.tscn
-res://actors/enemy_armored.tscn
 res://prefabs/checkpoint.tscn
 res://prefabs/pause_menu.tscn
-res://scripts/pause_menu.gd
-res://scripts/enemy.gd
+res://levels/world_final.tscn
+res://scripts/player.gd
+res://portal.gd
+res://scripts/hitbox.gd
+res://prefabs/coin.tscn
+res://scripts/coin.gd

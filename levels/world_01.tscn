@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://btuhq4m3cskby"]
+[gd_scene load_steps=62 format=3 uid="uid://btuhq4m3cskby"]
 
 [ext_resource type="Script" path="res://scripts/world_01.gd" id="1_qsjd4"]
 [ext_resource type="Texture2D" uid="uid://bcgvvt7obbd4j" path="res://assets/Seasonal Tilesets/1 - Grassland/Terrain (16 x 16).png" id="1_xlyao"]
@@ -43,7 +43,9 @@
 [ext_resource type="PackedScene" uid="uid://bqmgt1cdyirc6" path="res://portal.tscn" id="37_sknir"]
 [ext_resource type="PackedScene" uid="uid://cw5tyis2nxcrk" path="res://levels/world_02.tscn" id="38_3ev4l"]
 [ext_resource type="PackedScene" uid="uid://4spq8spbs8cp" path="res://prefabs/checkpoint.tscn" id="43_csgt1"]
+[ext_resource type="AudioStream" uid="uid://cvp8n6qopdjir" path="res://Sounds/Sounds-20230918T153216Z-001/Sounds/level_completed.wav" id="43_qi75p"]
 [ext_resource type="PackedScene" uid="uid://b2a6vmqqi2gry" path="res://prefabs/pause_menu.tscn" id="44_ffk01"]
+[ext_resource type="AudioStream" uid="uid://ct8m42r5wnhk7" path="res://Sounds/Music-20230918T153219Z-001/Music/Retro Beat.ogg" id="46_mvjlx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ll1cg"]
 texture = ExtResource("1_xlyao")
@@ -2771,6 +2773,11 @@ metadata/_edit_group_ = true
 position = Vector2(0, -11)
 shape = SubResource("RectangleShape2D_nktgp")
 
+[node name="victoryFx" type="AudioStreamPlayer2D" parent="portal"]
+position = Vector2(-1744, -155)
+stream = ExtResource("43_qi75p")
+volume_db = -10.0
+
 [node name="checkpoint" parent="." instance=ExtResource("43_csgt1")]
 position = Vector2(136, 0)
 
@@ -2784,6 +2791,11 @@ position = Vector2(1576, -48)
 position = Vector2(-48, 146)
 
 [node name="pause_menu" parent="." instance=ExtResource("44_ffk01")]
+
+[node name="bgMusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("46_mvjlx")
+volume_db = -5.0
+autoplay = true
 
 [connection signal="body_entered" from="spikes-area" to="." method="_on_spikesarea_body_entered"]
 [connection signal="body_entered" from="spikes-area2" to="." method="_on_spikesarea_body_entered"]
