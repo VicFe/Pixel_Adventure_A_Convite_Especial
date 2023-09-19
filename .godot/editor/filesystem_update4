@@ -1,16 +1,8 @@
-res://levels/world_01.tscn
-res://shaders/movement_clounds.gdshader
-res://levels/world_02.tscn
-res://levels/world_03.tscn
 res://actors/player.tscn
+res://shaders/movement_clounds.gdshader
 res://actors/enemy.tscn
 res://actors/base_patrol.tscn
 res://actors/enemy_devil.tscn
 res://prefabs/checkpoint.tscn
 res://prefabs/pause_menu.tscn
-res://levels/world_final.tscn
-res://scripts/player.gd
-res://portal.gd
-res://scripts/hitbox.gd
 res://prefabs/coin.tscn
-res://scripts/coin.gd
