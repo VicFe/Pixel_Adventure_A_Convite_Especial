@@ -1,40 +1,57 @@
-[gd_scene load_steps=16 format=3 uid="uid://bddjcjdfxpo1r"]
+[gd_scene load_steps=21 format=3 uid="uid://bddjcjdfxpo1r"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_vb5mn"]
-[ext_resource type="Texture2D" uid="uid://boos4ccr68gvu" path="res://assets/Sprite Pack 2/2 - Mr. Mochi/Hurt (32 x 32).png" id="2_35ydl"]
-[ext_resource type="Texture2D" uid="uid://5423ifruquhm" path="res://assets/Sprite Pack 2/2 - Mr. Mochi/Idle (32 x 32).png" id="2_e80cp"]
-[ext_resource type="Texture2D" uid="uid://dn8oa36mmbo4" path="res://assets/Sprite Pack 2/2 - Mr. Mochi/Jumping (32 x 32).png" id="3_4pgxm"]
-[ext_resource type="Texture2D" uid="uid://b6mgjj00jljrn" path="res://assets/Sprite Pack 2/2 - Mr. Mochi/Running (32 x 32).png" id="4_bdr4c"]
+[ext_resource type="Texture2D" uid="uid://coc6alf23op2i" path="res://assets/Cave Tileset/Hurt (16 x 32).png" id="2_nqvii"]
+[ext_resource type="Texture2D" uid="uid://de2btc700x3ep" path="res://assets/Sprite Pack 1/3 - Princess Sera/Idle (16 x 32).png" id="3_vavrw"]
+[ext_resource type="Texture2D" uid="uid://bmkydrb355iqy" path="res://assets/Sprite Pack 1/3 - Princess Sera/Jumping (16 x 32).png" id="4_fmj17"]
+[ext_resource type="Texture2D" uid="uid://ckkwnw42apqk7" path="res://assets/Sprite Pack 1/3 - Princess Sera/Running (16 x 32).png" id="5_v4i1j"]
+[ext_resource type="AudioStream" uid="uid://c1gve8nr8lfmw" path="res://Sounds/Sounds-20230918T153216Z-001/Sounds/jump1.ogg" id="6_pmbh2"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_1x3np"]
-atlas = ExtResource("2_e80cp")
-region = Rect2(0, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_awdcn"]
+atlas = ExtResource("3_vavrw")
+region = Rect2(0, 0, 16, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_vtgbx"]
-atlas = ExtResource("2_e80cp")
-region = Rect2(32, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_fiwpq"]
+atlas = ExtResource("3_vavrw")
+region = Rect2(16, 0, 16, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hva72"]
-atlas = ExtResource("4_bdr4c")
-region = Rect2(0, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_gtinb"]
+atlas = ExtResource("3_vavrw")
+region = Rect2(32, 0, 16, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xvoo6"]
-atlas = ExtResource("4_bdr4c")
-region = Rect2(32, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_02d7i"]
+atlas = ExtResource("3_vavrw")
+region = Rect2(48, 0, 16, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_45man"]
-atlas = ExtResource("4_bdr4c")
-region = Rect2(64, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_uidr3"]
+atlas = ExtResource("5_v4i1j")
+region = Rect2(0, 0, 16, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_38ibi"]
-atlas = ExtResource("4_bdr4c")
-region = Rect2(96, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_3yhd0"]
+atlas = ExtResource("5_v4i1j")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i3t0j"]
+atlas = ExtResource("5_v4i1j")
+region = Rect2(32, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vyjxl"]
+atlas = ExtResource("5_v4i1j")
+region = Rect2(48, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_01xbv"]
+atlas = ExtResource("5_v4i1j")
+region = Rect2(64, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_brn44"]
+atlas = ExtResource("5_v4i1j")
+region = Rect2(80, 0, 16, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_apejo"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_35ydl")
+"texture": ExtResource("2_nqvii")
 }],
 "loop": true,
 "name": &"hurt",
@@ -42,18 +59,24 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_1x3np")
+"texture": SubResource("AtlasTexture_awdcn")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_vtgbx")
+"texture": SubResource("AtlasTexture_fiwpq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gtinb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_02d7i")
 }],
 "loop": true,
 "name": &"idle",
-"speed": 5.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_4pgxm")
+"texture": ExtResource("4_fmj17")
 }],
 "loop": true,
 "name": &"jump",
@@ -61,16 +84,22 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_hva72")
+"texture": SubResource("AtlasTexture_uidr3")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_xvoo6")
+"texture": SubResource("AtlasTexture_3yhd0")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_45man")
+"texture": SubResource("AtlasTexture_i3t0j")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_38ibi")
+"texture": SubResource("AtlasTexture_vyjxl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_01xbv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_brn44")
 }],
 "loop": true,
 "name": &"run",
@@ -78,13 +107,13 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_05iqy"]
-size = Vector2(14, 15)
+size = Vector2(7, 23)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6jvut"]
-size = Vector2(18, 12)
+size = Vector2(14, 24)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eiyo8"]
-size = Vector2(14, 6)
+size = Vector2(11, 5)
 
 [node name="player" type="CharacterBody2D"]
 collision_mask = 94
@@ -96,12 +125,11 @@ script = ExtResource("1_vb5mn")
 texture_filter = 1
 position = Vector2(0, -15)
 sprite_frames = SubResource("SpriteFrames_apejo")
-animation = &"hurt"
+animation = &"idle"
 autoplay = "idle"
 
 [node name="collision" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(0, -7.5)
+position = Vector2(0.5, -11.5)
 shape = SubResource("RectangleShape2D_05iqy")
 
 [node name="hurtbox" type="Area2D" parent="."]
@@ -109,20 +137,19 @@ collision_layer = 0
 collision_mask = 4
 
 [node name="collision" type="CollisionShape2D" parent="hurtbox"]
-visible = false
-position = Vector2(0, -10)
+position = Vector2(0, -12)
 shape = SubResource("RectangleShape2D_6jvut")
 debug_color = Color(0.839216, 0, 0.109804, 0.419608)
 
 [node name="remote" type="RemoteTransform2D" parent="."]
 
 [node name="ray_right" type="RayCast2D" parent="."]
-position = Vector2(8, -7)
+position = Vector2(4, -7)
 target_position = Vector2(4, 0)
 collision_mask = 4
 
 [node name="ray_left" type="RayCast2D" parent="."]
-position = Vector2(-8, -7)
+position = Vector2(-4, -7)
 target_position = Vector2(-4, 0)
 collision_mask = 4
 
@@ -131,8 +158,13 @@ collision_layer = 0
 collision_mask = 64
 
 [node name="head_collision" type="CollisionShape2D" parent="head_collider"]
-position = Vector2(0, -16)
+position = Vector2(0, -22)
 shape = SubResource("RectangleShape2D_eiyo8")
+debug_color = Color(0.0822642, 0.649074, 0, 0.42)
+
+[node name="jumpFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_pmbh2")
+volume_db = -30.0
 
 [connection signal="body_entered" from="hurtbox" to="." method="_on_hurtbox_body_entered"]
 [connection signal="body_entered" from="head_collider" to="." method="_on_head_collider_body_entered"]

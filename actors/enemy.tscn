@@ -1,14 +1,15 @@
-[gd_scene load_steps=13 format=3 uid="uid://b7rvawodyn3et"]
+[gd_scene load_steps=14 format=3 uid="uid://b7rvawodyn3et"]
 
 [ext_resource type="Script" path="res://scripts/ground_enemy.gd" id="1_63ul7"]
 [ext_resource type="Texture2D" uid="uid://dp87dfvm86v61" path="res://assets/Sprite Pack 2/4 - Robo Pumpkin/Walking (16 x 16).png" id="1_qiktg"]
 [ext_resource type="Texture2D" uid="uid://d1a4m6e3ecpka" path="res://assets/Sprite Pack 2/4 - Robo Pumpkin/Hurt (16 x 16).png" id="2_qn782"]
 [ext_resource type="Texture2D" uid="uid://chb8c4dwyvjya" path="res://assets/Sprite Pack 2/4 - Robo Pumpkin/Standing (16 x 16).png" id="3_jc6tj"]
 [ext_resource type="PackedScene" uid="uid://f5jha3y62jdi" path="res://prefabs/hitbox.tscn" id="5_oa71p"]
+[ext_resource type="AudioStream" uid="uid://ddrb1x2qq16iq" path="res://Sounds/Sounds-20230918T153216Z-001/Sounds/enemy_hit.wav" id="6_ej6ww"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ivcdp"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kfno6"]
 radius = 3.99997
-height = 11.9999
+height = 13.9999
 
 [sub_resource type="Animation" id="Animation_opml3"]
 length = 0.001
@@ -181,7 +182,7 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qeqfk"]
-size = Vector2(8, 3.25)
+size = Vector2(8, 3)
 
 [node name="enemy" type="CharacterBody2D" groups=["enemies"]]
 collision_layer = 4
@@ -196,7 +197,7 @@ hframes = 2
 [node name="collision" type="CollisionShape2D" parent="."]
 position = Vector2(0, -4)
 rotation = 1.57437
-shape = SubResource("CapsuleShape2D_ivcdp")
+shape = SubResource("CapsuleShape2D_kfno6")
 
 [node name="anim" type="AnimationPlayer" parent="."]
 autoplay = "walk"
@@ -207,11 +208,16 @@ libraries = {
 
 [node name="wall_detector" type="RayCast2D" parent="."]
 position = Vector2(0, -5)
-target_position = Vector2(-7, 0)
+target_position = Vector2(-8, 0)
 collision_mask = 6
 
 [node name="hitbox" parent="." instance=ExtResource("5_oa71p")]
 
 [node name="collision" type="CollisionShape2D" parent="hitbox"]
-position = Vector2(0, -13.625)
+position = Vector2(0, -13.5)
 shape = SubResource("RectangleShape2D_qeqfk")
+debug_color = Color(0.968627, 0, 0.454902, 0.419608)
+
+[node name="damageFtx" type="AudioStreamPlayer2D" parent="hitbox"]
+stream = ExtResource("6_ej6ww")
+volume_db = -10.0

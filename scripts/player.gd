@@ -13,6 +13,7 @@ var direction
 
 @onready var animation := $anim as AnimatedSprite2D
 @onready var remote_transform := $remote as RemoteTransform2D 
+@onready var jump_fx = $jumpFX as AudioStreamPlayer2D
 
 signal player_has_died()
 
@@ -24,6 +25,7 @@ func _physics_process(delta):
 	# Handle Jump.
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_FORCE
+		jump_fx.play()
 		is_jumping = true
 	elif is_on_floor(): 
 		is_jumping = false
@@ -46,7 +48,7 @@ func _physics_process(delta):
 		if collision.get_collider().has_method("has_collided_with"):
 			collision.get_collider().has_collided_with(collision, self)
 	
-func _on_hurtbox_body_entered(body: Node2D) -> void:
+func _on_hurtbox_body_entered(_body: Node2D) -> void:
 	if $ray_right.is_colliding():
 			take_damage(Vector2(-200,-200))
 	elif $ray_left.is_colliding():
