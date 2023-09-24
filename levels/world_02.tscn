@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://cw5tyis2nxcrk"]
+[gd_scene load_steps=53 format=3 uid="uid://cw5tyis2nxcrk"]
 
 [ext_resource type="Script" path="res://scripts/world_01.gd" id="1_vy808"]
 [ext_resource type="Texture2D" uid="uid://bcgvvt7obbd4j" path="res://assets/Seasonal Tilesets/1 - Grassland/Terrain (16 x 16).png" id="2_gruov"]
@@ -30,7 +30,6 @@
 [ext_resource type="PackedScene" uid="uid://dx7u6xxadcmxf" path="res://prefabs/break_box.tscn" id="32_x6lpg"]
 [ext_resource type="Texture2D" uid="uid://dn4vcy65s8hmt" path="res://assets/brick-pieces-20230913T124303Z-001/brick-pieces/Coin-Sprites/02_Coin-Sprites.png" id="33_ejmhy"]
 [ext_resource type="PackedScene" uid="uid://bqmgt1cdyirc6" path="res://portal.tscn" id="33_opota"]
-[ext_resource type="PackedScene" uid="uid://clj341xyn764f" path="res://levels/world_03.tscn" id="34_to7pg"]
 [ext_resource type="Texture2D" uid="uid://bstuh08nhmt8u" path="res://assets/brick-pieces-20230913T124303Z-001/brick-pieces/Coin-Sprites/03_Coin-Sprites.png" id="34_v4ikp"]
 [ext_resource type="AudioStream" uid="uid://cvp8n6qopdjir" path="res://Sounds/Sounds-20230918T153216Z-001/Sounds/level_completed.wav" id="35_667lv"]
 [ext_resource type="FontFile" uid="uid://ck870aancxob0" path="res://assets/brick-pieces-20230913T113935Z-001/brick-pieces/RevMiniPixel.ttf" id="35_d3bh8"]
@@ -2820,7 +2819,6 @@ position = Vector2(1312, 42)
 
 [node name="portal" parent="." instance=ExtResource("33_opota")]
 position = Vector2(2088, -94)
-room = ExtResource("34_to7pg")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="portal"]

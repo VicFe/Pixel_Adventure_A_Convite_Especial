@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=3 uid="uid://clj341xyn764f"]
+[gd_scene load_steps=57 format=3 uid="uid://clj341xyn764f"]
 
 [ext_resource type="Script" path="res://scripts/world_01.gd" id="1_5j7qa"]
 [ext_resource type="Texture2D" uid="uid://bcgvvt7obbd4j" path="res://assets/Seasonal Tilesets/1 - Grassland/Terrain (16 x 16).png" id="2_ma4x1"]
@@ -37,7 +37,6 @@
 [ext_resource type="Texture2D" uid="uid://b5e15mgfrfsdb" path="res://assets/Seasonal Tilesets/2 - Autumn Forest/Background parts/2 - Trees.png" id="33_w3hau"]
 [ext_resource type="Texture2D" uid="uid://u2ecval3xdum" path="res://assets/Seasonal Tilesets/2 - Autumn Forest/Background parts/1 - Leaf_top.png" id="34_66w4o"]
 [ext_resource type="PackedScene" uid="uid://bqmgt1cdyirc6" path="res://portal.tscn" id="37_f6jqp"]
-[ext_resource type="PackedScene" uid="uid://cqpoadgbxs7c7" path="res://levels/world_final.tscn" id="38_n7oda"]
 [ext_resource type="AudioStream" uid="uid://cvp8n6qopdjir" path="res://Sounds/Sounds-20230918T153216Z-001/Sounds/level_completed.wav" id="39_snglc"]
 [ext_resource type="AudioStream" uid="uid://cups3bbb1wffn" path="res://Sounds/Music-20230918T153219Z-001/Music/Swinging Pants.ogg" id="40_b335i"]
 
@@ -3033,7 +3032,6 @@ centered = false
 
 [node name="portal" parent="." instance=ExtResource("37_f6jqp")]
 position = Vector2(2088, -94)
-room = ExtResource("38_n7oda")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="portal"]
